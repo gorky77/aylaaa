@@ -1,0 +1,281 @@
+/* Genel Stil Ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Başlık Stili */
+header {
+    background-color: #3333338e;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1d1b14;
+}
+
+.hero {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('project1.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 700px; 
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 2rem; /* Başlık boyutu küçültüldü */
+    line-height: 1.4; /* Satır aralığı düzenlendi */
+    color: #f2f2f2;
+    margin-bottom: 1rem; /* Alt metin ile boşluk eklendi */
+}
+
+.hero-text p {
+    font-size: 1rem; /* Alt metin boyutu azaltıldı */
+    line-height: 1.6; /* Alt metin satır aralığı artırıldı */
+    color: #ffe2d1;
+    margin-bottom: 1.5rem; /* Buton ile aralığı artırıldı */
+}
+
+.hero-button {
+    background-color: #2a2d20;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero-button:hover {
+    background-color: #9bb300;
+}
+.hero {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Hakkımızda Bölümü (About Section) */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: white;
+    opacity: 0; /* Başlangıç opacity */
+    transition: opacity 1.5s ease-in-out; /* Geçiş efekti */
+}
+
+.about-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    width: 60%;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease; /* Hover efekti için */
+}
+
+.about-text p:hover {
+    color: #333;
+    transform: scale(1.05);
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ürün Bölümü (Products Section) */
+.products-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.product-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.product-item {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .product-gallery {
+        flex-direction: column;
+    }
+}
+
+/* İletişim Bölümü (Contact Section) */
+.contact-section {
+    background-color: #333;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Call for Price Button */
+.call-button {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.call-button:hover {
+    background-color: orange;
+}
+
+/* Footer and Social Media Icons */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+/* Mobil uyumluluk için */
+@media (max-width: 768px) {
+    .navbar, .hero-text, .product-item {
+       
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .product-item {
+        width: 90%; /* Mobilde ürün kutularını tam genişlik yapın */
+    }
+
+    footer .social-icons img {
+        width: 30px; /* Sosyal medya ikonlarının boyutunu daha küçük ekranlar için optimize edin */
+    }
+}
